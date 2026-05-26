@@ -68,7 +68,7 @@ Execute os comandos abaixo, um por um, dentro do seu terminal de preferência:
 
 ```bash
 # 1. Clone o repositório para a sua máquina
-git clone https://github.com/Denardi28/auth-app
+git clone https://github.com/ViniciusDenardi/auth-app.git
 
 # 2. Acesse a pasta do projeto que foi criada
 cd auth-app
