@@ -64,29 +64,35 @@ Antes de começar, você precisa ter instalado:
 
 ### 💻 Passo a Passo
 
+Execute os comandos abaixo, um por um, dentro do seu terminal de preferência:
+
 ```bash
-# 1. Clonar o repositório
-git clone https://github.com/ViniciusDenardi/auth-app.git
+# 1. Clone o repositório para a sua máquina
+git clone https://github.com/Denardi28/auth-app
 
-# 2. Entrar na pasta
-cd seu-repositorio
+# 2. Acesse a pasta do projeto que foi criada
+cd auth-app
 
-# 3. Instalar dependências do Laravel
+# 3. Instale as dependências de pacotes do PHP/Laravel
 composer install
 
-# 4. Criar arquivo de ambiente
+# 4. Instale as dependências do Frontend (Tailwind CSS, Vite, etc.)
+npm install
+
+# 5. Crie o arquivo de configuração do ambiente (.env)
 cp .env.example .env
 
-# 5. Gerar chave da aplicação
+# 6. Gere a chave única de segurança do Laravel
 php artisan key:generate
 
-# 6. Configurar banco de dados no .env
+# 7. Crie o banco de dados, rode as migrations e adicione as categorias padrão (Seeders)
+php artisan migrate --seed
 
-# 7. Rodar migrations
-php artisan migrate
-
-# 8. Criar link do storage (IMPORTANTE)
+# 8. Crie o link do Storage (Passo obrigatório para que as imagens fiquem visíveis na tela)
 php artisan storage:link
 
-# 9. Rodar o servidor
+# 9. Inicialize o compilador do Tailwind CSS (Deixe este terminal aberto rodando)
+npm run dev
+
+# 10. Ligue o servidor local do PHP/Laravel
 php artisan serve
